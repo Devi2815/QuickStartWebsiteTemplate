@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="../javaScript/style.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="card">
+            <h1 id="value">0</h1>
+            <div class="con">
+                <button class="btn btn-inc">inc</button>
+                <button class="btn btn-reset">reset</button>
+                <button class="btn btn-dec">dec</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let increaseButton = document.querySelector(".btn-inc");
+        let decreaseButton = document.querySelector(".btn-dec");
+        let resetButton = document.querySelector(".btn-reset");
+        let counterValue = document.querySelector("#value")
+        let value=0;
+        increaseButton.onclick = function(){
+            ++value
+            counterValue.textContent = value
+
+            if(value>0){
+                counterValue.style.color = "green"
+            }
+            else if (value<0){
+                counterValue.style.color = "red"
+            }
+            else{
+                counterValue.style.color = "black"
+            }
+
+        }
+        decreaseButton.onclick = function(){
+            --value
+            counterValue.textContent = value
+
+            if(value>0){
+                counterValue.style.color = "green"
+            }
+            else if (value<0){
+                counterValue.style.color = "red"
+            }
+            else{
+                counterValue.style.color = "black"
+            }
+        }
+
+
+        resetButton.onclick = function(){
+            value=0
+            counterValue.textContent = value
+            counterValue.style.color = "black"
+        }
+        
+    </script>
+    
+</body>
+</html>

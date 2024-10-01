@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thar</title>
+    <style>
+        .parent .colors{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .parent .colors .btn-box{
+            width: 50px;
+            height: 50px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            
+        }
+        .parent .colors .haha{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .parent .colors .haha .para1{
+            color: red;
+
+        }
+
+        .parent .colors .haha .para2{
+            color: black;
+
+        }
+        .parent .colors .haha .para3{
+            color: sandybrown;
+
+        }
+        .parent .colors .haha .para4{
+            color: black;
+
+        }
+
+        .parent .colors .haha #red{
+            background-color: red;
+        }
+        .parent .colors .haha #black{
+            background-color: black;
+        }
+        .parent .colors .haha #sand{
+            background-color: sandybrown;
+        }
+        .parent .colors .haha #gray{
+            background-color: rgb(50, 51, 51);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <img src="https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwf50e1509/images/THRN/hires/LX_RedRage_1366x443.png" alt="" id="car">
+        <div class="colors">
+            <div class="haha">
+                <button class="btn-box" id="red" onclick="redButton()"></button>
+                <h3 class="para1">Red</h3>
+            </div>
+            <div class="haha">
+                <button class="btn-box" id="black" onclick="blackButton()"></button>
+                <h3 class="para2">Black</h3>
+            </div>
+            <div class="haha">
+                <button class="btn-box" id="sand" onclick="sandButton()"></button>
+                <h3 class="para3">Sand</h3>
+            </div>
+            <div class="haha">
+                <button class="btn-box" id="gray" onclick="grayButton()"></button>
+                <h3 class="para4">Gray</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let carImg = document.getElementById("car")
+        let redBtn = document.getElementById("red")
+        let blackBtn = document.getElementById("black")
+        let sandBtn = document.getElementById("sand")
+        let grayBtn = document.getElementById("gray")
+
+        function redButton(){
+            carImg.src = "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwf50e1509/images/THRN/hires/LX_RedRage_1366x443.png"
+        }
+        function blackButton(){
+            carImg.src = "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwcbbf3a58/images/THRN/hires/LX_StealthBlack_1366x443.png"
+        }
+        function sandButton(){
+            carImg.src = "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb92a5d01/images/THRN/hires/LX_EarthEdition_1366x443.png"
+        }
+        function grayButton(){
+            carImg.src = "https://auto.mahindra.com/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8eae85dc/images/THRN/hires/LX_DeepGrey_1366x443.png"
+        }
+    </script>
+</body>
+</html>

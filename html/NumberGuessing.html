@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numberGuessing</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .parent{
+            height: 100vh;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent .rs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="input">
+            <input type="number" name="number" id="user-input">
+            <input type="button" value="check" onclick="guessNumber()">
+        </div>
+        <div class="rs">
+            <h1 id="game-result">results here.....</h1>
+            <h1 id="value"></h1>
+        </div>
+    </div>
+
+    <script>
+        let randomNumber = Math.round(Math.random()*100)
+        let result = document.getElementById("game-result")
+        let labelValue = document.getElementById("value")
+        let attempt = 0
+        const maxAttempts = 5
+        function guessNumber(){
+            if(attempt < maxAttempts){
+                let guessedNumber = parseInt(document.getElementById("user-input").value)
+                if(guessedNumber > randomNumber){
+                    result.textContent = "Guessed To High! Try Again."
+                    result.style.color = "orange"
+                }
+                else if(guessedNumber < randomNumber){
+                    result.textContent = "Gessed To Low! Try Again."
+                    result.style.color = "blue"
+                }
+                else if(guessedNumber === randomNumber){
+                    result.textContent = "Congrats! well try"
+                    result.style.color = "green"
+                }
+            }
+            else{
+                result.textContent = "Sorry, limit reached!!! Refresh The Page to Start Again...."
+                labelValue.innerHTML = "value is "+ randomNumber
+                labelValue.style.color ="red"
+                result.style.color = "red"
+            }
+            attempt++
+            
+        }
+
+        
+    </script>
+</body>
+</html>

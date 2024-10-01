@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Board</title>
+    <link rel="stylesheet" href="../css/scoreboard.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="sub-parent">
+            <h1>TEAM-1</h1>
+            <div class="team">
+            <div class="main">
+                <div class="sub-main">
+                    <div class="score">
+                        <h3>Score</h3>
+                        <p id="score1">0</p>
+                    </div>
+                    <div class="wickets">
+                        <h3>Wickets</h3>
+                        <p id="wickets1">0</p>
+                    </div>
+                </div>
+                <div class="overs">
+                    <h3>Overs</h3>
+                    <p id="overs1">0</p>
+                </div>
+            </div>
+            <div class="score-btn">
+                <p>Score Buttons</p>
+                <button id="btn1" onclick="buttons1()">1</button>
+                <button id="btn2" onclick="buttons2()">2</button>
+                <button id="btn3" onclick="buttons3()">3</button>
+                <button id="btn4" onclick="buttons4()">4</button>
+                <button id="btn5" onclick="buttons5()">5</button>
+                <button id="btn6" onclick="buttons6()">6</button>
+            </div>
+            <div class="wickets-btn">
+                <p>Wickets</p>
+                <button id="wic" onclick="wicButton()">Down</button>
+            </div>
+            <div class="overs-btn">
+                <p>Overs</p>
+                <button id="ov" onclick="ovButton()">20</button>
+            </div>
+        </div>
+        </div>
+        <button id="re"></button>
+        <div class="sub-parent">
+            <h1>TEAM-2</h1>
+            <div class="team">
+                <div class="main">
+                    <div class="sub-main">
+                        <div class="score">
+                            <h3>Score</h3>
+                            <p id="score2">0</p>
+                        </div>
+                        <div class="wickets">
+                            <h3>Wickets</h3>
+                            <p id="wickets2">0</p>
+                        </div>
+                    </div>
+                    <div class="overs">
+                        <h3>Overs</h3>
+                        <p id="overs2">0</p>
+                    </div>
+                </div>
+                <div class="score-btn">
+                    <p>Score Buttons</p>
+                    <button id="btn11" onclick="button1()">1</button>
+                    <button id="btn22" onclick="button2()">2</button>
+                    <button id="btn33" onclick="button3()">3</button>
+                    <button id="btn44" onclick="button4()">4</button>
+                    <button id="btn55" onclick="button5()">5</button>
+                    <button id="btn66" onclick="button6()">6</button>
+                </div>
+                <div class="wickets-btn">
+                    <p>Wickets</p>
+                    <button id="wic2" onclick="wicButton2()">Down</button>
+                </div>
+                <div class="overs-btn">
+                    <p>Overs</p>
+                    <button id="ov2" onclick="ovButton2()">20</button>
+                </div>
+            </div>
+        </div>
+        <img src="../assets/gameover.png" alt="" id="imgGame" width="300px" height="250px">
+        
+
+    <script src="../js/scoreboard.js"></script>
+</body>
+</html>
